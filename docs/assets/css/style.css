@@ -1,0 +1,510 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "M PLUS 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* Glass Navbar Effect */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(51, 51, 51, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    padding: 15px 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.navbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(51, 51, 51, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: -1;
+}
+
+.navbar .navbar-logo h1 {
+    font-size: 35px;
+    color: greenyellow;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.navbar .navbar-logo .tec {
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.navbar ul {
+    list-style: none;
+    gap: 25px;
+    display: flex;
+    transition: all 0.3s ease;
+}
+
+.navbar ul li {
+    position: relative;
+}
+
+.navbar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.3s ease;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.navbar ul li a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background-color: greenyellow;
+    transition: 0.3s ease;
+    box-shadow: 0 2px 4px rgba(154, 205, 50, 0.3);
+}
+
+.navbar ul li a:hover {
+    color: greenyellow;
+}
+
+.navbar ul li a:hover::before {
+    width: 100%;
+}
+
+.navabr-search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.navabr-search input {
+    padding: 8px 12px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    background: rgba(68, 68, 68, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.navabr-search input:focus {
+    border-color: greenyellow;
+    background: rgba(68, 68, 68, 0.5);
+    box-shadow: 0 0 10px rgba(154, 205, 50, 0.3);
+}
+
+.navabr-search input::placeholder {
+    color: #ccc;
+}
+
+.navabr-search button {
+    padding: 8px 16px;
+    background: rgba(154, 205, 50, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #333;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 2px 10px rgba(154, 205, 50, 0.3);
+}
+
+.navabr-search button:hover {
+    background: rgba(154, 205, 50, 1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(154, 205, 50, 0.4);
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1001;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: greenyellow;
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background: rgba(25, 25, 25, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: left 0.3s ease;
+    z-index: 999;
+}
+
+.mobile-menu.active {
+    left: 0;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.mobile-menu ul li {
+    margin: 2rem 0;
+}
+
+.mobile-menu ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.mobile-menu ul li a:hover {
+    color: greenyellow;
+}
+
+.mobile-search {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    width: 80%;
+    max-width: 300px;
+}
+
+.mobile-search input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    background: rgba(68, 68, 68, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.mobile-search input:focus {
+    border-color: greenyellow;
+    background: rgba(68, 68, 68, 0.5);
+    box-shadow: 0 0 10px rgba(154, 205, 50, 0.3);
+}
+
+.mobile-search button {
+    width: 100%;
+    padding: 12px 16px;
+    background: rgba(154, 205, 50, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #333;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 2px 10px rgba(154, 205, 50, 0.3);
+    font-size: 16px;
+}
+
+.mobile-search button:hover {
+    background: rgba(154, 205, 50, 1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(154, 205, 50, 0.4);
+}
+
+/* CSS Home */
+.home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../gambar/cafe.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding-top: 80px;
+}
+
+.home .isi {
+    padding: 2rem 7%;
+    max-width: 60rem;
+    animation: fadeInUp 1s ease-out;
+    text-align: left;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.isi a {
+    text-decoration: none;
+    color: greenyellow;
+}
+
+.isi h1 {
+    margin-top: 1rem;
+    font-size: 3.5rem;
+    color: #ffffff;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.isi h1 span {
+    color: greenyellow;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+}
+
+.isi p {
+    font-size: 1.3rem;
+    color: #ffffff;
+    font-weight: 400;
+    margin: 1.5rem 0 2rem 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    line-height: 1.6;
+    max-width: 90%;
+}
+
+.isi .cta {
+    margin-top: 2rem;
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+    color: greenyellow;
+    background: rgba(51, 51, 51, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 2px solid rgba(154, 205, 50, 0.3);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    font-weight: 600;
+}
+
+.isi .cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(154, 205, 50, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.isi .cta:hover {
+    background: rgba(154, 205, 50, 0.9);
+    color: #333333;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(154, 205, 50, 0.4);
+    border-color: greenyellow;
+}
+
+.isi .cta:hover::before {
+    left: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 15px 40px;
+    }
+
+    .home .isi {
+        padding: 2rem 5%;
+        max-width: 70rem;
+    }
+
+    .isi h1 {
+        font-size: 3rem;
+    }
+
+    .isi p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .navbar ul,
+    .navabr-search {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .navbar .navbar-logo h1 {
+        font-size: 28px;
+    }
+
+    .home {
+        background-attachment: scroll;
+        padding-top: 70px;
+    }
+
+    .home .isi {
+        padding: 2rem 5%;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .isi h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .isi p {
+        font-size: 1.1rem;
+        text-align: center;
+        max-width: 100%;
+        margin: 1rem 0 1.5rem 0;
+    }
+
+    .isi .cta {
+        padding: 0.8rem 2rem;
+        font-size: 1.1rem;
+        margin-top: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 12px 15px;
+    }
+
+    .navbar .navbar-logo h1 {
+        font-size: 24px;
+    }
+
+    .home {
+        padding-top: 60px;
+        min-height: 90vh;
+    }
+
+    .home .isi {
+        padding: 1.5rem 4%;
+    }
+
+    .isi h1 {
+        font-size: 2rem;
+        line-height: 1.1;
+    }
+
+    .isi p {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin: 0.8rem 0 1.2rem 0;
+    }
+
+    .isi .cta {
+        padding: 0.7rem 1.8rem;
+        font-size: 1rem;
+        margin-top: 1.2rem;
+    }
+
+    .hamburger span {
+        width: 22px;
+        height: 2.5px;
+    }
+
+    .mobile-menu ul li a {
+        font-size: 1.3rem;
+    }
+
+    .mobile-search {
+        width: 90%;
+    }
+}
+
+@media (max-width: 360px) {
+    .navbar .navbar-logo h1 {
+        font-size: 20px;
+    }
+
+    .isi h1 {
+        font-size: 1.8rem;
+    }
+
+    .isi p {
+        font-size: 0.95rem;
+    }
+
+    .isi .cta {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.95rem;
+    }
+}

@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - Awiee CoffeeShop</title>
+    <link rel="stylesheet" href="assets/css/kontak-style.css">
+</head>
+<body>
+    <!-- Navbar Start -->
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <h1>Awiee <span class="tec">CoffeShop🍵</span></h1>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu Kopi</a></li>
+            <li><a href="galeri.html">Galeri Cafe</a></li>
+            <li><a href="kontak.html" class="active">Kontak</a></li>
+        </ul>
+        <div class="navabr-search">
+            <input type="text" placeholder="Cari info..🔍">
+            <button>Search</button>
+        </div>
+
+        <!-- Hamburger Menu -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    <!-- navbar end -->
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu Kopi</a></li>
+            <li><a href="galeri-cafe.html">Galeri Cafe</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+        <div class="mobile-search">
+            <input type="text" placeholder="Cari info..🔍">
+            <button>Search</button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hubungi <span>Kami</span></h1>
+            <p>Kami siap melayani Anda dengan sepenuh hati. Jangan ragu untuk menghubungi kami!</p>
+        </div>
+    </section>
+
+    <!-- Contact Info Section -->
+    <section class="contact-info">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <span>📍</span>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Alamat Kami</h3>
+                        <p>Jl. Mahasiswa Raya No. 123<br>
+                        Dekat Kampus Universitas<br>
+                        Kota Pelajar, Indonesia 12345</p>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <span>📱</span>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Telepon & WhatsApp</h3>
+                        <p>+62 812-3456-7890<br>
+                        +62 821-9876-5432<br>
+                        <small>Buka 24/7 untuk pemesanan</small></p>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <span>📧</span>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Email</h3>
+                        <p>info@awieecoffee.com<br>
+                        order@awieecoffee.com<br>
+                        <small>Respon dalam 24 jam</small></p>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <span>🕒</span>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Jam Operasional</h3>
+                        <p>Senin - Jumat: 07:00 - 22:00<br>
+                        Sabtu - Minggu: 08:00 - 23:00<br>
+                        <small>Buka setiap hari</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="form-container">
+                <div class="form-header">
+                    <h2>Kirim Pesan</h2>
+                    <p>Ada pertanyaan, saran, atau ingin reservasi tempat? Kirim pesan kepada kami!</p>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Nama Lengkap</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Nomor Telepon</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subjek</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Pilih Subjek</option>
+                                <option value="pertanyaan">Pertanyaan Umum</option>
+                                <option value="reservasi">Reservasi Tempat</option>
+                                <option value="catering">Catering & Event</option>
+                                <option value="kerjasama">Kerjasama</option>
+                                <option value="keluhan">Keluhan</option>
+                                <option value="lainnya">Lainnya</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Pesan</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Tulis pesan Anda di sini..." required></textarea>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">Saya ingin menerima newsletter dan promo terbaru dari Awiee CoffeeShop</label>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <span>Kirim Pesan</span>
+                        <div class="btn-loader" style="display: none;"></div>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2>Lokasi Kami</h2>
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <div class="map-content">
+                        <div class="map-icon">🗺️</div>
+                        <h3>Peta Lokasi</h3>
+                        <p>Jl. Mahasiswa Raya No. 123<br>Dekat Kampus Universitas</p>
+                        <div class="map-directions">
+                            <h4>Petunjuk Arah:</h4>
+                            <ul>
+                                <li>📍 50m dari Gerbang Utama Universitas</li>
+                                <li>🚌 Dekat Halte Bus Kampus</li>
+                                <li>🅿️ Parkir Motor & Mobil Tersedia</li>
+                                <li>🏪 Sebelah Toko Buku Mahasiswa</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="social-media">
+        <div class="container">
+            <h2>Ikuti Kami</h2>
+            <p>Dapatkan update terbaru tentang menu, promo, dan event menarik!</p>
+            <div class="social-links">
+                <a href="#" class="social-link instagram">
+                    <span class="social-icon">📷</span>
+                    <div class="social-info">
+                        <h4>Instagram</h4>
+                        <p>@awieecoffeeshop</p>
+                    </div>
+                </a>
+                <a href="#" class="social-link facebook">
+                    <span class="social-icon">📘</span>
+                    <div class="social-info">
+                        <h4>Facebook</h4>
+                        <p>Awiee CoffeeShop</p>
+                    </div>
+                </a>
+                <a href="#" class="social-link tiktok">
+                    <span class="social-icon">🎵</span>
+                    <div class="social-info">
+                        <h4>TikTok</h4>
+                        <p>@awieecoffee</p>
+                    </div>
+                </a>
+                <a href="#" class="social-link youtube">
+                    <span class="social-icon">📺</span>
+                    <div class="social-info">
+                        <h4>YouTube</h4>
+                        <p>Awiee CoffeeShop</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Pertanyaan yang Sering Diajukan</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Apakah ada WiFi gratis?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ya! Kami menyediakan WiFi gratis dengan kecepatan tinggi untuk semua pelanggan. Password WiFi akan diberikan saat Anda memesan.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Apakah bisa reservasi tempat?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Tentu saja! Anda bisa reservasi tempat melalui WhatsApp atau mengisi form kontak di atas. Reservasi sangat direkomendasikan untuk weekend dan jam sibuk.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Apakah ada diskon untuk mahasiswa?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ya! Kami memberikan diskon 10% untuk mahasiswa dengan menunjukkan KTM yang masih berlaku. Berlaku untuk semua menu kecuali promo khusus.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Apakah menerima pesanan catering?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ya, kami melayani catering untuk acara kampus, seminar, atau gathering. Minimal order 20 porsi dengan pemesanan H-2. Hubungi kami untuk paket khusus.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Apakah ada menu non-kafein?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Tentu! Kami memiliki berbagai pilihan minuman non-kafein seperti hot chocolate, matcha latte, fruit tea, dan berbagai jus segar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Awiee CoffeeShop</h3>
+                    <p>Mewujudkan impian mahasiswa menjadi kenyataan dengan secangkir kopi berkualitas</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Jam Buka</h4>
+                    <p>Senin - Jumat: 07:00 - 22:00</p>
+                    <p>Sabtu - Minggu: 08:00 - 23:00</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontak</h4>
+                    <p>📱 +62 812-3456-7890</p>
+                    <p>📧 info@awieecoffee.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Awiee CoffeeShop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Hamburger Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+
+            // Prevent body scroll when menu is open
+            if (mobileMenu.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileLinks = document.querySelectorAll('.mobile-menu a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Contact Form Handling
+        const contactForm = document.getElementById('contactForm');
+        const submitBtn = contactForm.querySelector('.submit-btn');
+        const btnText = submitBtn.querySelector('span');
+        const btnLoader = submitBtn.querySelector('.btn-loader');
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Show loading state
+            btnText.style.display = 'none';
+            btnLoader.style.display = 'inline-block';
+            submitBtn.disabled = true;
+
+            // Simulate form submission
+            setTimeout(() => {
+                // Hide loading state
+                btnText.style.display = 'inline';
+                btnLoader.style.display = 'none';
+                submitBtn.disabled = false;
+
+                // Show success message
+                showNotification('Pesan berhasil dikirim! Kami akan segera menghubungi Anda.', 'success');
+
+                // Reset form
+                contactForm.reset();
+            }, 2000);
+        });
+
+        // FAQ Toggle
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            const answer = item.querySelector('.faq-answer');
+            const toggle = item.querySelector('.faq-toggle');
+
+            question.addEventListener('click', () => {
+                const isOpen = item.classList.contains('active');
+
+                // Close all FAQ items
+                faqItems.forEach(faq => {
+                    faq.classList.remove('active');
+                    faq.querySelector('.faq-toggle').textContent = '+';
+                });
+
+                // Open clicked item if it wasn't already open
+                if (!isOpen) {
+                    item.classList.add('active');
+                    toggle.textContent = '-';
+                }
+            });
+        });
+
+        // Notification function
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            notification.innerHTML = `
+                <div class="notification-content">
+                    <span>${message}</span>
+                    <button class="notification-close">&times;</button>
+                </div>
+            `;
+
+            document.body.appendChild(notification);
+
+            // Auto remove after 5 seconds
+            setTimeout(() => {
+                if (document.body.contains(notification)) {
+                    document.body.removeChild(notification);
+                }
+            }, 5000);
+
+            // Close button functionality
+            const closeBtn = notification.querySelector('.notification-close');
+            closeBtn.addEventListener('click', () => {
+                if (document.body.contains(notification)) {
+                    document.body.removeChild(notification);
+                }
+            });
+        }
+
+        // Form validation
+        const inputs = contactForm.querySelectorAll('input, textarea, select');
+
+        inputs.forEach(input => {
+            input.addEventListener('blur', validateField);
+            input.addEventListener('input', clearError);
+        });
+
+        function validateField(e) {
+            const field = e.target;
+            const value = field.value.trim();
+
+            // Remove existing error
+            clearError(e);
+
+            if (field.hasAttribute('required') && !value) {
+                showFieldError(field, 'Field ini wajib diisi');
+                return false;
+            }
+
+            if (field.type === 'email' && value) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(value)) {
+                    showFieldError(field, 'Format email tidak valid');
+                    return false;
+                }
+            }
+
+            if (field.type === 'tel' && value) {
+                const phoneRegex = /^[\+]?[0-9\-\s\(\)]{10,}$/;
+                if (!phoneRegex.test(value)) {
+                    showFieldError(field, 'Format nomor telepon tidak valid');
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        function showFieldError(field, message) {
+            const formGroup = field.closest('.form-group');
+            const existingError = formGroup.querySelector('.field-error');
+
+            if (!existingError) {
+                const errorElement = document.createElement('span');
+                errorElement.className = 'field-error';
+                errorElement.textContent = message;
+                formGroup.appendChild(errorElement);
+            }
+
+            field.classList.add('error');
+        }
+
+        function clearError(e) {
+            const field = e.target;
+            const formGroup = field.closest('.form-group');
+            const errorElement = formGroup.querySelector('.field-error');
+
+            if (errorElement) {
+                formGroup.removeChild(errorElement);
+            }
+
+            field.classList.remove('error');
+        }
+
+        // Smooth scroll for navbar
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Social media links (you can replace with actual links)
+        document.querySelectorAll('.social-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const platform = link.classList[1];
+                showNotification(`Mengalihkan ke ${platform}...`, 'info');
+            });
+        });
+    </script>
+</body>
+</html>

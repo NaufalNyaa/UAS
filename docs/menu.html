@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Kopi - Awiee CoffeeShop</title>
+    <link rel="stylesheet" href="assets/css/menu-style.css">
+</head>
+<body>
+    <!-- Navbar Start -->
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <h1>Awiee <span class="tec">CoffeShop🍵</span></h1>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html" class="active">Menu Kopi</a></li>
+            <li><a href="galeri.html">Galeri Cafe</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+        <div class="navabr-search">
+            <input type="text" placeholder="Cari menu..🔍">
+            <button>Search</button>
+        </div>
+
+        <!-- Hamburger Menu -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    <!-- navbar end -->
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu Kopi</a></li>
+            <li><a href="galeri.html">Galeri Cafe</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+        <div class="mobile-search">
+            <input type="text" placeholder="Cari menu..🔍">
+            <button>Search</button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Menu <span>Kopi Spesial</span></h1>
+            <p>Nikmati berbagai pilihan kopi berkualitas tinggi yang dipilih khusus untuk Anda</p>
+        </div>
+    </section>
+
+    <!-- Menu Categories -->
+    <section class="menu-categories">
+        <div class="container">
+            <div class="category-buttons">
+                <button class="category-btn active" data-category="all">Semua Menu</button>
+                <button class="category-btn" data-category="espresso">Espresso Based</button>
+                <button class="category-btn" data-category="manual">Manual Brew</button>
+                <button class="category-btn" data-category="cold">Cold Brew</button>
+                <button class="category-btn" data-category="non-coffee">Non Coffee</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Items -->
+    <section class="menu-items">
+        <div class="container">
+            <div class="menu-grid">
+                <!-- Espresso Based -->
+                <div class="menu-card" data-category="espresso">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&h=300&fit=crop" alt="Espresso">
+                        <div class="menu-overlay">
+                            <button class="order-btn">Pesan Sekarang</button>
+                        </div>
+                    </div>
+                    <div class="menu-info">
+                        <h3>Espresso</h3>
+                        <p>Shot kopi murni dengan crema yang sempurna</p>
+                        <div class="price">Rp 15.000</div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="espresso">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1561047029-3000c68339ca?w=400&h=300&fit=crop" alt="Cappuccino">
+                        <div class="menu-overlay">
+                            <button class="order-btn">Pesan Sekarang</button>
+                        </div>
+                    </div>
+                    <div class="menu-info">
+                        <h3>Cappuccino</h3>
+                        <p>Perpaduan sempurna espresso, steamed milk, dan foam</p>
+                        <div class="price">Rp 25.000</div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="espresso">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=400&h=300&fit=crop" alt="Latte">
+                        <div class="menu-overlay">
+                            <button class="order-btn">Pesan Sekarang</button>
+                        </div>
+                    </div>
+                    <div class="menu-info">
+                        <h3>Caffe Latte</h3>
+                        <p>Espresso dengan steamed milk dan latte art yang indah</p>
+                        <div class="price">Rp 28.000</div>
+                    </div>
+                </div>
+
+                <!-- Manual Brew -->
+                <div class="menu-card" data-category="manual">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1497515114629-f71d768fd07c?w=400&h=300&fit=crop" alt="V60">
+                        <div class="menu-overlay">
+                            <button class="order-btn">Pesan Sekarang</button>
+                        </div>
+                    </div>
+                    <div class="menu-info">
+                        <h3>V60 Pour Over</h3>
+                        <p>Seduhan manual dengan teknik pour over yang presisi</p>
+                        <div class="price">Rp 35.000</div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="manual">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c?w=400&h=300&fit=crop" alt="French Press">
+                        <div class="menu-overlay">
+                            <button class="order-btn">Pesan Sekarang</button>
+                        </div>
+                    </div>
+                    <div class="menu-info">
+                        <h3>French Press</h3>
+                        <p>Kopi dengan body yang kaya dan full flavor</p>
+                        <div class="price">Rp 30.000</div>
+                    </div>
+                </div>
+
+                <!-- Cold Brew -->
+                <div class="menu-card" data-category="cold">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&h=300&fit=crop" alt="Iced Coffee">
+                        <div class="menu-overlay">
+                            <button class="order-btn">Pesan Sekarang</button>
+                        </div>
+                    </div>
+                    <div class="menu-info">
+                        <h3>Iced Coffee</h3>
+                        <p>Kopi dingin yang menyegarkan dengan es batu</p>
+                        <div class="price">Rp 22.000</div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="cold">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=400&h=300&fit=crop" alt="Cold Brew">
+                        <div class="menu-overlay">
+                            <button class="order-btn">Pesan Sekarang</button>
+                        </div>
+                    </div>
+                    <div class="menu-info">
+                        <h3>Cold Brew</h3>
+                        <p>Ekstraksi dingin selama 12 jam untuk rasa yang smooth</p>
+                        <div class="price">Rp 32.000</div>
+                    </div>
+                </div>
+
+                <!-- Non Coffee -->
+                <div class="menu-card" data-category="non-coffee">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=400&h=300&fit=crop" alt="Hot Chocolate">
+                        <div class="menu-overlay">
+                            <button class="order-btn">Pesan Sekarang</button>
+                        </div>
+                    </div>
+                    <div class="menu-info">
+                        <h3>Hot Chocolate</h3>
+                        <p>Cokelat panas dengan whipped cream dan marshmallow</p>
+                        <div class="price">Rp 20.000</div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="non-coffee">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop" alt="Green Tea Latte">
+                        <div class="menu-overlay">
+                            <button class="order-btn">Pesan Sekarang</button>
+                        </div>
+                    </div>
+                    <div class="menu-info">
+                        <h3>Matcha Latte</h3>
+                        <p>Teh hijau premium dengan steamed milk yang creamy</p>
+                        <div class="price">Rp 26.000</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Awiee CoffeeShop</h3>
+                    <p>Mewujudkan impian mahasiswa menjadi kenyataan dengan secangkir kopi berkualitas</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Jam Buka</h4>
+                    <p>Senin - Jumat: 07:00 - 22:00</p>
+                    <p>Sabtu - Minggu: 08:00 - 23:00</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontak</h4>
+                    <p>📱 +62 812-3456-7890</p>
+                    <p>📧 info@awieecoffee.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Awiee CoffeeShop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Hamburger Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+
+            // Prevent body scroll when menu is open
+            if (mobileMenu.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileLinks = document.querySelectorAll('.mobile-menu a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Menu Category Filter
+        const categoryBtns = document.querySelectorAll('.category-btn');
+        const menuCards = document.querySelectorAll('.menu-card');
+
+        categoryBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                categoryBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+
+                const category = btn.getAttribute('data-category');
+
+                menuCards.forEach(card => {
+                    if (category === 'all' || card.getAttribute('data-category') === category) {
+                        card.style.display = 'block';
+                        card.style.animation = 'fadeInUp 0.5s ease';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Order button functionality
+        document.querySelectorAll('.order-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const menuName = e.target.closest('.menu-card').querySelector('h3').textContent;
+                alert(`Terima kasih! Anda telah memesan ${menuName}. Silakan lanjutkan ke halaman pemesanan.`);
+            });
+        });
+
+        // Search functionality
+        const searchInput = document.querySelector('.navabr-search input');
+        const searchBtn = document.querySelector('.navabr-search button');
+        const mobileSearchInput = document.querySelector('.mobile-search input');
+        const mobileSearchBtn = document.querySelector('.mobile-search button');
+
+        function searchMenu(searchTerm) {
+            menuCards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const description = card.querySelector('p').textContent.toLowerCase();
+
+                if (title.includes(searchTerm) || description.includes(searchTerm) || searchTerm === '') {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Desktop search
+        if (searchBtn && searchInput) {
+            searchBtn.addEventListener('click', () => {
+                const searchTerm = searchInput.value.toLowerCase();
+                searchMenu(searchTerm);
+            });
+
+            searchInput.addEventListener('keyup', (e) => {
+                if (e.key === 'Enter') {
+                    const searchTerm = searchInput.value.toLowerCase();
+                    searchMenu(searchTerm);
+                }
+            });
+        }
+
+        // Mobile search
+        if (mobileSearchBtn && mobileSearchInput) {
+            mobileSearchBtn.addEventListener('click', () => {
+                const searchTerm = mobileSearchInput.value.toLowerCase();
+                searchMenu(searchTerm);
+            });
+
+            mobileSearchInput.addEventListener('keyup', (e) => {
+                if (e.key === 'Enter') {
+                    const searchTerm = mobileSearchInput.value.toLowerCase();
+                    searchMenu(searchTerm);
+                }
+            });
+        }
+
+        // Smooth scroll for navbar
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awiee CoffeeShop - Home</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navbar Start -->
+     <nav class="navbar">
+        <div class="navbar-logo">
+            <h1>Awiee <span class="tec">CoffeShop🍵</span></h1>
+        </div>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="menu.html">Menu Kopi</a></li>
+            <li><a href="galeri.html">Galeri Cafe</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+        <div class="navabr-search">
+            <input type="text" placeholder="Cari..🔍">
+            <button>Search</button>
+        </div>
+
+        <!-- Hamburger Menu -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+     </nav>
+     <!-- navbar end -->
+
+     <!-- Mobile Menu -->
+     <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu Kopi</a></li>
+            <li><a href="galeri-cafe.html">Galeri Cafe</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+        <div class="mobile-search">
+            <input type="text" placeholder="Cari..🔍">
+            <button>Search</button>
+        </div>
+     </div>
+
+     <!-- main start -->
+      <nav class="home">
+        <main class="isi">
+        <h1>Mimpi <span>mahasiswa</span> menjadi kenyataan</h1>
+        <p>Dari sudut kecil kos-kosan hingga mewujudkan coffee shop impian, perjalanan Awiee dimulai dari passion sederhana untuk menciptakan ruang hangat bagi sesama pencinta kopi.</p>
+        <a href="menu.html" class="cta">Pesan Sekarang</a>
+        </main>
+      </nav>
+
+      <!-- main end -->
+
+      <script>
+        // Hamburger Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+
+            // Prevent body scroll when menu is open
+            if (mobileMenu.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileLinks = document.querySelectorAll('.mobile-menu a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+      </script>
+</body>
+</html>
