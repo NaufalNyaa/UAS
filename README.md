@@ -23,11 +23,7 @@ Sebagai bagian dari ujian akhir semester, saya, **Naufal Afaf Ekayana (NIM: 2417
 ---
 
 ## 📁 Struktur Proyek
-.
-└── Docs/
-    ├── index.html
-    ├── style.css
-    └── cafe.jpg
+![Banner](tree.png)
 
 ---
 
