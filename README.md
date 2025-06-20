@@ -30,7 +30,7 @@ Sebagai bagian dari ujian akhir semester, saya, **Naufal Afaf Ekayana (NIM: 2417
 ## 🔗 Live Preview
 
 > Klik tautan berikut untuk melihat langsung website-nya:
-🌍 [Lihat Website Awiee CoffeeShop](https://mbullcodehex.github.io/uas/)
+🌍 [Lihat Website Awiee CoffeeShop](https://naufalnyaa.github.io/UAS/)
 
 ---
 
